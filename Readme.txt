@@ -1,20 +1,11 @@
-cd /usr/local/Cellar/kafka/0.10.2.0
-zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+This is a maven based java project which does the following:
 
-cd /usr/local/Cellar/kafka/0.10.2.0
-kafka-server-start /usr/local/etc/kafka/server.properties
+-	Convert JSON input from http json client to java object - //it's commented out, uncomment with appropriate http url and your java object
+-	Convert Json file to Java Object 
+-	Convert Java Object to Json String
+-	Convert Json String to Java Object
+-	Write Java Object to Json file
 
-cd /development/tools/logstash-2.3.4
-bin/logstash -f /development/env/dxc/ec21_prodmig/dxc/src/main/resources/logstash/mirror/kafka-kafka-mobiledata.conf
+-	To execute the project - Execute "RunMe.java" as Java Project and you should be able to see the above steps getting executed.
 
-cd /development/tools/logstash-2.3.4
-bin/logstash -f /development/env/dxc/ec21_prodmig/dxc/src/main/resources/logstash/mirror/kafka-kafka-webdata.conf
-
-cd /home/vasu/ExperienceCollectorBundle-99.99.feature-SNAPSHOT-2017_06_05_19_58/ec2/kafka_2.11-0.9.0.1
-bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic maaBAAggregator
-
-cd /home/vasu/ExperienceCollectorBundle-99.99.feature-SNAPSHOT-2017_06_05_19_58/ec2/kafka_2.11-0.9.0.1
-bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic maaAggregator
-
-
-kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
+Note: Input file (jsonIn.json) & Outout file (jsonOut.json) can be found at: /exercise/sts-workspace/StatusIO/resources/json/
