@@ -1,6 +1,5 @@
 package com.wal.monkeys;
 
-import com.wal.monkeys.*;
 import java.io.File;
 import java.io.IOException;
 import javax.ws.rs.client.Client;
