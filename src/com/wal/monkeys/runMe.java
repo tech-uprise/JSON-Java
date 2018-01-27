@@ -1,21 +1,18 @@
 package com.wal.monkeys;
 
+import com.wal.monkeys.*;
 import java.io.File;
-
 import java.io.IOException;
-
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-public class runMe {
+public class RunMe {
 
 	public static void main(String[] args) {
 		
@@ -33,7 +30,7 @@ public class runMe {
 	}
 	
 	
-	// COnvert Json file to Java Object 
+	// Convert Json file to Java Object 
 	private static Schedule fileToObject() {
 		ObjectMapper objectMapper = new ObjectMapper();
 		
@@ -73,7 +70,26 @@ public class runMe {
 		return (jsonString);
 		
 	}
+
+	// Convert Json String to Java Object
+	private static Schedule stringToObject(String jsonString) {
 		
+		Schedule schedule = new Schedule();
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		
+		try {
+			schedule = objectMapper.readValue(jsonString, Schedule.class);
+			
+			System.out.println("Converted JSON string to an object Schedule(): " +schedule.toString());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return (schedule);
+		
+	}
 	// Write Java Object to Json file
 	private static void objectToFile(Schedule schedule)
 	{
@@ -94,25 +110,6 @@ public class runMe {
 		}
 	}
 	
-	// Convert Json String to Java Object
-	private static Schedule stringToObject(String jsonString) {
-		
-		Schedule schedule = new Schedule();
-		
-		ObjectMapper objectMapper = new ObjectMapper();
-		
-		try {
-			schedule = objectMapper.readValue(jsonString, Schedule.class);
-			
-			System.out.println("Converted JSON string to an object Schedule(): " +schedule.toString());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return (schedule);
-		
-	}
 
 	// This method will read the json payload from json clinet, convert it as java object and print it as string.
 	private static Response processJsonPayload() {
