@@ -1,0 +1,179 @@
+{
+  "status" : {
+    "error" : "no",
+    "message" : "OK"
+  },
+  "result" : {
+    "upcoming_maintenances" : [ {
+      "_id" : "5a628dbfdae27e23940e7187",
+      "reminder_send_at_72hr" : "2018-01-23T20:00:00.000Z",
+      "reminder_send_at_24hr" : "2018-01-25T20:00:00.000Z",
+      "reminder_send_at_1hr" : "2018-01-26T19:00:00.000Z",
+      "datetime_planned_end" : "2018-01-26T23:00:00.000Z",
+      "datetime_planned_start" : "2018-01-26T20:00:00.000Z",
+      "statuspage" : "5a2ee0de2e604604d65c1b39",
+      "name" : "Scheduled Maintenance",
+      "__v" : 0,
+      "message_subject" : "Scheduled Maintenance Notification from Application Status Page",
+      "reminder_sent_72hr" : false,
+      "reminder_sent_24hr" : false,
+      "reminder_sent_1hr" : false,
+      "reminder_72hr" : false,
+      "reminder_24hr" : false,
+      "reminder_1hr" : false,
+      "datetime_open" : "2018-01-20T00:30:55.467Z",
+      "historic" : false,
+      "automation_stop_text" : "Scheduled maintenance is complete.",
+      "automation_start_text" : "Scheduled maintenance is starting.",
+      "automation_completed" : false,
+      "automation_started" : false,
+      "automation" : false,
+      "kind" : "maintenance",
+      "messages" : [ {
+        "_id" : "5a628dbfdae27e23940e718c",
+        "user_email" : "your@email.com",
+        "user_id" : "5a2ee0c9c4cbf4537f365076",
+        "user_full_name" : "FirstName LastName",
+        "details" : "Application  is scheduled for maintenance from {{startTime}} until {{endTime}}. During this time, no part of the system will be available. For questions please contact us on email at your@email.com",
+        "state" : 100,
+        "status" : 200,
+        "statuspage" : "5a2ee0de2e604604d65c1b39",
+        "maintenance" : "5a628dbfdae27e23940e7187",
+        "ip" : "138.42.113.4",
+        "__v" : 0,
+        "datetime" : "2018-01-20T00:30:55.482Z",
+        "historic" : false,
+        "containers" : [ "5a2f089db4546d046c8f00e2" ],
+        "components" : [ "5a2ee0de2e604604d65c1b49", "5a31143f994f1104d9832673", "5a31150f7fb8b23daa595d9a", "5a311516b4546d046c8f01f7" ]
+      } ],
+      "infrastructure_affected" : [ {
+        "component" : {
+          "_id" : "5a2ee0de2e604604d65c1b49",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 2,
+          "containers" : [ "5a2f089db4546d046c8f00e2" ],
+          "name" : " Collector",
+          "description" : " Collector"
+        },
+        "container" : {
+          "_id" : "5a2f089db4546d046c8f00e2",
+          "name" : "Primary Site",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 1,
+          "location_geo" : {
+            "coords" : [ ]
+          }
+        },
+        "_id" : "5a628dbfdae27e23940e718b"
+      }, {
+        "component" : {
+          "_id" : "5a31143f994f1104d9832673",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 3,
+          "containers" : [ "5a2f089db4546d046c8f00e2" ],
+          "name" : "Application Console",
+          "description" : "Console of Application"
+        },
+        "container" : {
+          "_id" : "5a2f089db4546d046c8f00e2",
+          "name" : "Primary Site",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 1,
+          "location_geo" : {
+            "coords" : [ ]
+          }
+        },
+        "_id" : "5a628dbfdae27e23940e718a"
+      }, {
+        "component" : {
+          "_id" : "5a31150f7fb8b23daa595d9a",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 4,
+          "containers" : [ "5a2f089db4546d046c8f00e2" ],
+          "name" : "Application",
+          "description" : "Console and backend side of Application"
+        },
+        "container" : {
+          "_id" : "5a2f089db4546d046c8f00e2",
+          "name" : "Primary Site",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 1,
+          "location_geo" : {
+            "coords" : [ ]
+          }
+        },
+        "_id" : "5a628dbfdae27e23940e7189"
+      }, {
+        "component" : {
+          "_id" : "5a311516b4546d046c8f01f7",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 5,
+          "containers" : [ "5a2f089db4546d046c8f00e2" ],
+          "name" : "Application",
+          "description" : "Console and backend side of Application"
+        },
+        "container" : {
+          "_id" : "5a2f089db4546d046c8f00e2",
+          "name" : "Primary Site",
+          "statuspage" : "5a2ee0de2e604604d65c1b39",
+          "__v" : 0,
+          "position" : 1,
+          "location_geo" : {
+            "coords" : [ ]
+          }
+        },
+        "_id" : "5a628dbfdae27e23940e7188"
+      } ],
+      "containers_affected" : [ {
+        "_id" : "5a2f089db4546d046c8f00e2",
+        "name" : "Primary Site",
+        "statuspage" : "5a2ee0de2e604604d65c1b39",
+        "__v" : 0,
+        "position" : 1,
+        "location_geo" : {
+          "coords" : [ ]
+        }
+      } ],
+      "components_affected" : [ {
+        "_id" : "5a2ee0de2e604604d65c1b49",
+        "statuspage" : "5a2ee0de2e604604d65c1b39",
+        "__v" : 0,
+        "position" : 2,
+        "containers" : [ "5a2f089db4546d046c8f00e2" ],
+        "name" : " Collector",
+        "description" : " Collector"
+      }, {
+        "_id" : "5a31143f994f1104d9832673",
+        "statuspage" : "5a2ee0de2e604604d65c1b39",
+        "__v" : 0,
+        "position" : 3,
+        "containers" : [ "5a2f089db4546d046c8f00e2" ],
+        "name" : "Application Console",
+        "description" : "Console of Application"
+      }, {
+        "_id" : "5a31150f7fb8b23daa595d9a",
+        "statuspage" : "5a2ee0de2e604604d65c1b39",
+        "__v" : 0,
+        "position" : 4,
+        "containers" : [ "5a2f089db4546d046c8f00e2" ],
+        "name" : "Application",
+        "description" : "Console and backend side of Application"
+      }, {
+        "_id" : "5a311516b4546d046c8f01f7",
+        "statuspage" : "5a2ee0de2e604604d65c1b39",
+        "__v" : 0,
+        "position" : 5,
+        "containers" : [ "5a2f089db4546d046c8f00e2" ],
+        "name" : "Application",
+        "description" : "Console and backend side of Application"
+      } ]
+    } ]
+  }
+}
